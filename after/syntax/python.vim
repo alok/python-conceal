@@ -67,7 +67,7 @@ syntax match pyNiceOperator /\S=\S/ms=s+1,me=e-1 conceal cchar=←
 " Your background, and taste, may affect whether you like # for cardinality ;)
 " syntax keyword pyNiceBuiltin len conceal cchar=𝕃
 " syntax keyword pyNiceOperator print conceal cchar=⎙
-" syntax keyword pyNiceOperator return conceal cchar=⏎
+syntax keyword pyNiceOperator return conceal cchar=⏎
 " syntax keyword pyNiceOperator break conceal cchar=↰
 " syntax keyword pyNiceOperator continue conceal cchar=↴
 
