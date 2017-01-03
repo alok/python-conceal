@@ -1,8 +1,3 @@
-" we need the conceal feature (vim ≥ 7.3)
-if !has('conceal')
-    finish
-endif
-
 " remove the keywords. we'll re-add them below
 " TODO why is this breaking?
 " syntax clear pythonOperator
@@ -10,9 +5,6 @@ endif
 syntax match pythonOperator "\<is\>"
 
 syntax match pyNiceOperator /\S\.\S/ms=s+1,me=e-1 conceal cchar=∘
-
-" syntax match pyNiceOperator  ms=s+1,me=e-1  conceal cchar=∘
-" syntax match pyNiceOperator /\s\.\s/ms=s+1,me=e-1 conceal cchar=∘
 
 syntax match pyNiceOperator "\<in\>" conceal cchar=∈
 syntax match pyNiceOperator "\<or\>" conceal cchar=∨
@@ -38,13 +30,6 @@ syntax match pyNiceKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 syntax match pyNiceOperator "\<\%(math\.\|\)ceil\>" conceal cchar=⌈
  syntax match pyNiceOperator "\<\%(math\.\|\)floor\>" conceal cchar=⌊
 
-" syntax keyword pyNiceStatement int conceal cchar=ℤ
-" syntax keyword pyNiceStatement float conceal cchar=𝔽
-" syntax keyword pyNiceStatement complex conceal cchar=ℂ
-
-" syntax match pyNiceOperator " \* " conceal cchar=∙
-" syntax match pyNiceOperator " / " conceal cchar=÷
-"
 " The following are special cases where it *may* be okay to ignore PEP8
 syntax match pyNiceOperator "\( \|\)\*\*\( \|\)2\>" conceal cchar=²
 syntax match pyNiceOperator "\( \|\)\*\*\( \|\)3\>" conceal cchar=³
@@ -63,14 +48,8 @@ syntax match pyNiceOperator /\s=\s/ms=s+1,me=e-1 conceal cchar=←
 " syntax match pythonComment /\v#/ conceal cchar=⍝
 " highlight link pythonComment Comment
 syntax match pyNiceOperator /\S=\S/ms=s+1,me=e-1 conceal cchar=←
-" syntax match pyNiceOperator /\S=\S/ms=s+1,me=e-1 conceal cchar=→
 
-" Your background, and taste, may affect whether you like # for cardinality ;)
-" syntax keyword pyNiceBuiltin len conceal cchar=𝕃
-" syntax keyword pyNiceOperator print conceal cchar=⎙
 syntax keyword pyNiceOperator return conceal cchar=⏎
-" syntax keyword pyNiceOperator break conceal cchar=↰
-" syntax keyword pyNiceOperator continue conceal cchar=↴
 
 syntax keyword pyNiceStatement lambda conceal cchar=λ
 syntax match pyNiceOperator lambda conceal cchar=λ
