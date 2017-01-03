@@ -30,6 +30,7 @@ syntax match pyNiceOperator "!=" conceal cchar=≠
 syntax keyword pyNiceOperator sum conceal cchar=∑
 " syntax keyword pyNiceBuiltin all conceal cchar=∀
 syntax keyword pyNiceBuiltin for conceal cchar=∀
+syntax keyword pyNiceBuiltin while conceal cchar=⥁
 syntax keyword pyNiceBuiltin in conceal cchar=∈
 " syntax keyword pyNiceBuiltin any conceal cchar=∃
 syntax match pyNiceOperator "\<\%(math\.\)\?sqrt\>" conceal cchar=√
