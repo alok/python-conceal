@@ -43,7 +43,7 @@ syntax match pyNiceSpecial "\<True\>" conceal cchar=𝐓
 syntax match pyNiceSpecial "True" conceal cchar=𝐓
 syntax keyword pyNiceSpecial True conceal cchar=𝐓
 syntax keyword pyNiceKeyword True conceal cchar=𝐓
-syntax match pyNiceOperator /\s\@\s/ms=s+1,me=e-1 conceal cchar=⊗
+syntax match pyNiceOperator /\s@\s/ms=s+1,me=e-1 conceal cchar=⊗
 syntax match pyNiceOperator /\s\*\s/ms=s+1,me=e-1 conceal cchar=∙
 syntax match pyNiceOperator /\s=\s/ms=s+1,me=e-1 conceal cchar=←
 " syntax match pyNiceOperator /\s=\s/ms=s+1,me=e-1 conceal cchar=→
