@@ -64,17 +64,30 @@ syntax keyword pyKeyword while conceal cchar=⥁
 " syntax match pyKeyword "\vint "me=e-1 conceal cchar=ℤ
 " syntax match pyKeyword "\vint ="me=e-2 conceal cchar=ℤ
 
-syntax keyword pyType int conceal cchar=ℤ
-syntax keyword pyType float conceal cchar=ℝ
 syntax keyword pyType complex conceal cchar=ℂ
 syntax keyword pyType str conceal cchar=𝐒
 syntax keyword pyType bool conceal cchar=𝔹
+
 syntax keyword pyType Vector conceal cchar=V
 syntax match pyType /np\.ndarray/ conceal cchar=V
+
 syntax match pyType /tf\.Tensor/ conceal cchar=𝕋
 syntax match pyType /torch\.Tensor/ conceal cchar=𝕋
 syntax match pyType /torch\.Variable/ conceal cchar=𝕋
 syntax match pyType /Variable/ conceal cchar=𝕋
+
+syntax keyword pyType float conceal cchar=ℝ
+syntax match pyType /np\.float32/ conceal cchar=ℝ
+syntax match pyType /np\.float64/ conceal cchar=ℝ
+syntax match pyType /tf\.float32/ conceal cchar=ℝ
+syntax match pyType /tf\.float64/ conceal cchar=ℝ
+
+syntax keyword pyType int conceal cchar=ℤ
+syntax match pyType /np\.int32/ conceal cchar=ℤ
+syntax match pyType /np\.int64/ conceal cchar=ℤ
+syntax match pyType /tf\.int32/ conceal cchar=ℤ
+syntax match pyType /tf\.int64/ conceal cchar=ℤ
+
 
 syntax match pyKeyword /\vnp\.arange/ conceal cchar=⍳
 
