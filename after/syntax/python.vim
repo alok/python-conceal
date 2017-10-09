@@ -46,12 +46,44 @@ syntax match pyOperator "\( \|\)\.\( \|\)T\>" conceal cchar=ᵀ
 
 
 
+syntax keyword pyKeyword alpha conceal cchar=α
+syntax keyword pyKeyword beta conceal cchar=β
+syntax keyword pyKeyword Gamma conceal cchar=Γ
+syntax keyword pyKeyword gamma conceal cchar=γ
+syntax keyword pyKeyword Delta conceal cchar=Δ
+syntax keyword pyKeyword delta conceal cchar=δ
+syntax keyword pyKeyword epsilon conceal cchar=ε
+syntax keyword pyKeyword zeta conceal cchar=ζ
+syntax keyword pyKeyword eta conceal cchar=η
+syntax keyword pyKeyword Theta conceal cchar=Θ
+syntax keyword pyKeyword theta conceal cchar=θ
+syntax keyword pyKeyword kappa conceal cchar=κ
+syntax keyword pyKeyword lambda conceal cchar=λ
+syntax keyword pyKeyword mu conceal cchar=μ
+syntax keyword pyKeyword nu conceal cchar=ν
+syntax keyword pyKeyword Xi conceal cchar=Ξ
+syntax keyword pyKeyword xi conceal cchar=ξ
+syntax keyword pyKeyword Pi conceal cchar=Π
+syntax keyword pyKeyword rho conceal cchar=ρ
+syntax keyword pyKeyword sigma conceal cchar=σ
+syntax keyword pyKeyword tau conceal cchar=τ
+syntax keyword pyKeyword upsilon conceal cchar=υ
+syntax keyword pyKeyword Phi conceal cchar=Φ
+syntax keyword pyKeyword phi conceal cchar=φ
+syntax keyword pyKeyword chi conceal cchar=χ
+syntax keyword pyKeyword Psi conceal cchar=Ψ
+syntax keyword pyKeyword psi conceal cchar=ψ
+syntax keyword pyKeyword Omega conceal cchar=Ω
+syntax keyword pyKeyword omega conceal cchar=ω
+
+syntax keyword pyKeyword nabla conceal cchar=∇
+
+
 
 " like APL
 syntax keyword pyKeyword range conceal cchar=⍳
 syntax keyword pyKeyword sum conceal cchar=∑
 
-syntax keyword pyKeyword lambda conceal cchar=λ
 syntax keyword pyConstant None conceal cchar=∅
 syntax keyword pyKeyword return conceal cchar=⏎
 syntax keyword pyConstant False conceal cchar=⊥
