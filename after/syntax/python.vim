@@ -111,14 +111,18 @@ syntax match pyType /Variable/ conceal cchar=𝕋
 syntax keyword pyType float conceal cchar=ℝ
 syntax match pyType /np\.float32/ conceal cchar=ℝ
 syntax match pyType /np\.float64/ conceal cchar=ℝ
+syntax match pyType /np\.float/ conceal cchar=ℝ
 syntax match pyType /tf\.float32/ conceal cchar=ℝ
 syntax match pyType /tf\.float64/ conceal cchar=ℝ
+syntax match pyType /tf\.float/ conceal cchar=ℝ
 
 syntax keyword pyType int conceal cchar=ℤ
 syntax match pyType /np\.int32/ conceal cchar=ℤ
 syntax match pyType /np\.int64/ conceal cchar=ℤ
+syntax match pyType /np\.int/ conceal cchar=ℤ
 syntax match pyType /tf\.int32/ conceal cchar=ℤ
 syntax match pyType /tf\.int64/ conceal cchar=ℤ
+syntax match pyType /tf\.int/ conceal cchar=ℤ
 
 
 syntax match pyKeyword /\vnp\.arange/ conceal cchar=⍳
