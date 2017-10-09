@@ -70,7 +70,11 @@ syntax keyword pyType complex conceal cchar=ℂ
 syntax keyword pyType str conceal cchar=𝐒
 syntax keyword pyType bool conceal cchar=𝔹
 syntax keyword pyType Vector conceal cchar=V
-syntax match pyType /\vnp\.ndarray/ conceal cchar=V
+syntax match pyType /np\.ndarray/ conceal cchar=V
+syntax match pyType /tf\.Tensor/ conceal cchar=𝕋
+syntax match pyType /torch\.Tensor/ conceal cchar=𝕋
+syntax match pyType /torch\.Variable/ conceal cchar=𝕋
+syntax match pyType /Variable/ conceal cchar=𝕋
 
 syntax match pyKeyword /\vnp\.arange/ conceal cchar=⍳
 
