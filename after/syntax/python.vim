@@ -1,17 +1,14 @@
 " remove the keywords. we'll re-add them below
 " TODO why is this breaking?
-" syntax clear pyOperator
+syntax clear pyOperator
 
 
 " TODO highlight comments correctly
 " syntax match pyComment "#" conceal cchar=⍝
-"
-"
+
 " XXX least specific cases at the top, since the match rules seem to be
 " cumulative.
 
-
-" syntax match pyOperator /\S\.\S/ms=s+1,me=e-1 conceal cchar=∘
 
 " Include the space after “not” – if present – so that “not a” becomes “¬a”.
 " also, don't hide “not” behind  ‘¬’ if it is after “is ”.
@@ -19,8 +16,8 @@
 " syntax match pyOperator "\%(is \)\@<!\<not\%( \|\>\)" conceal cchar=¬
 
 " Need to be handled specially for not in to work. Order doesn't matter.
-syntax match pyOperator "\<in\>" conceal cchar=∈
 syntax match pyOperator "\<not in\>" conceal cchar=∉
+syntax match pyOperator "\<in\>" conceal cchar=∈
 
 
 syntax match pyOperator ":" conceal cchar=⦂
