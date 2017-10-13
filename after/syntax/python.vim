@@ -1,6 +1,6 @@
 " remove the keywords. we'll re-add them below
 " TODO why is this breaking?
-syntax clear pyOperator
+syntax clear pythonOperator
 
 
 " TODO highlight comments correctly
