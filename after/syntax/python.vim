@@ -1,7 +1,5 @@
-" remove the keywords. we'll re-add them below
-" TODO why is this breaking?
+" Remove the keywords. We'll re-add them below.
 syntax clear pythonOperator
-
 
 " TODO highlight comments correctly
 " syntax match pyComment "#" conceal cchar=⍝
@@ -45,8 +43,6 @@ syntax match pyOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
 " I have no idea how these work, but I got the transpose working by copying.
 syntax match pyOperator "\( \|\)\.\( \|\)T\>" conceal cchar=ᵀ
 
-
-
 syntax keyword pyKeyword alpha conceal cchar=α
 syntax keyword pyKeyword beta conceal cchar=β
 syntax keyword pyKeyword Gamma conceal cchar=Γ
@@ -79,8 +75,6 @@ syntax keyword pyKeyword omega conceal cchar=ω
 
 syntax keyword pyKeyword nabla conceal cchar=∇
 
-
-
 " like APL
 syntax keyword pyKeyword range conceal cchar=⍳
 syntax keyword pyKeyword sum conceal cchar=∑
@@ -92,10 +86,11 @@ syntax keyword pyConstant True conceal cchar=⊤
 syntax keyword pyKeyword for conceal cchar=∀
 syntax keyword pyKeyword while conceal cchar=⥁
 
-" types
+" Types
 " TODO disable conceal if followed by left paren
-" syntax match pyKeyword "\vint "me=e-1 conceal cchar=ℤ
-" syntax match pyKeyword "\vint ="me=e-2 conceal cchar=ℤ
+"
+" syntax match pyKeyword /int/ "me=e-1 conceal cchar=ℤ
+" syntax match pyKeyword //int/ ="me=e-2 conceal cchar=ℤ
 
 syntax keyword pyType complex conceal cchar=ℂ
 syntax keyword pyType str conceal cchar=𝐒
