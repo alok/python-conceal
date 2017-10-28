@@ -1,5 +1,6 @@
-" Remove the keywords. We'll re-add them below.
-syntax clear pythonOperator
+" Remove the keywords. We'll re-add them below. Use silent in case the group
+" doesn't exist.
+silent! syntax clear pythonOperator
 
 " TODO highlight comments correctly
 " syntax match pyComment "#" conceal cchar=⍝
@@ -149,3 +150,4 @@ setlocal conceallevel=1
 
 " syntax keyword pyBuiltin all conceal cchar=∀
 " syntax keyword pyBuiltin any conceal cchar=∃
+"
