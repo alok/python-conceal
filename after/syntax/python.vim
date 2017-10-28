@@ -81,9 +81,9 @@ syntax keyword pyKeyword range conceal cchar=⍳
 syntax keyword pyKeyword sum conceal cchar=∑
 
 syntax keyword pyConstant None conceal cchar=∅
-syntax keyword pyKeyword return conceal cchar=⏎
-syntax keyword pyConstant False conceal cchar=⊥
+syntax keyword pyKeyword return conceal cchar=▶
 syntax keyword pyConstant True conceal cchar=⊤
+syntax keyword pyConstant False conceal cchar=⊥
 syntax keyword pyKeyword for conceal cchar=∀
 syntax keyword pyKeyword while conceal cchar=⥁
 
