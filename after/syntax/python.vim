@@ -84,9 +84,9 @@ syntax keyword pyConstant None conceal cchar=∅
 " http://www.fileformat.info/info/unicode/block/geometric_shapes/images.htm
 syntax keyword pyConstant break conceal cchar=◁
 syntax keyword pyKeyword return conceal cchar=◀
-syntax keyword pyKeyword if conceal cchar=▷
-syntax keyword pyKeyword elif conceal cchar=◿
-syntax keyword pyKeyword else conceal cchar=◻
+syntax keyword pyKeyword if conceal cchar=▸
+syntax keyword pyKeyword elif conceal cchar=▹
+syntax keyword pyKeyword else conceal cchar=▪
 syntax keyword pyConstant True conceal cchar=⊤
 syntax keyword pyConstant False conceal cchar=⊥
 syntax keyword pyKeyword for conceal cchar=∀
