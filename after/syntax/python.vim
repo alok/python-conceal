@@ -19,7 +19,6 @@ syntax match pyOperator "\<not in\>" conceal cchar=∉
 syntax match pyOperator "\<in\>" conceal cchar=∈
 
 
-syntax match pyOperator ":" conceal cchar=⦂
 syntax match pyOperator "->" conceal cchar=→
 syntax match pyOperator "<=" conceal cchar=≤
 syntax match pyOperator ">=" conceal cchar=≥
@@ -53,7 +52,7 @@ syntax keyword pyKeyword delta conceal cchar=δ
 syntax keyword pyKeyword epsilon conceal cchar=ε
 syntax keyword pyKeyword zeta conceal cchar=ζ
 syntax keyword pyKeyword eta conceal cchar=η
-syntax keyword pyKeyword Theta conceal cchar=Θ
+syntax keyword pyKeyword Theta conceal cchar=ϴ
 syntax keyword pyKeyword theta conceal cchar=θ
 syntax keyword pyKeyword kappa conceal cchar=κ
 syntax keyword pyKeyword lambda conceal cchar=λ
