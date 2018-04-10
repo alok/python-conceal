@@ -77,7 +77,6 @@ syntax keyword pyKeyword nabla conceal cchar=∇
 
 " like APL
 syntax keyword pyKeyword range conceal cchar=⍳
-syntax keyword pyKeyword sum conceal cchar=∑
 
 syntax keyword pyConstant None conceal cchar=∅
 " http://www.fileformat.info/info/unicode/block/geometric_shapes/images.htm
@@ -107,7 +106,8 @@ syntax match pyType /np\.ndarray/ conceal cchar=V
 syntax match pyType /tf\.Tensor/ conceal cchar=𝕋
 syntax match pyType /torch\.Tensor/ conceal cchar=𝕋
 syntax match pyType /torch\.Variable/ conceal cchar=𝕋
-syntax match pyType /Variable/ conceal cchar=𝕋
+syntax keyword pyType Tensor conceal cchar=𝕋
+syntax keyword pyType Variable conceal cchar=𝕋
 
 syntax keyword pyType float conceal cchar=ℝ
 syntax match pyType /np\.float/ conceal cchar=ℝ
@@ -129,7 +129,9 @@ syntax match pyType /tf\.int32/ conceal cchar=ℤ
 syntax match pyType /tf\.int64/ conceal cchar=ℤ
 
 
-syntax match pyKeyword /\vnp\.arange/ conceal cchar=⍳
+syntax match pyKeyword /np\.arange/ conceal cchar=⍳
+syntax match pyKeyword /torch\.arange/ conceal cchar=⍳
+syntax match pyKeyword /arange/ conceal cchar=⍳
 
 syntax match pyKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 
