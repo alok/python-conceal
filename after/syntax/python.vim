@@ -96,6 +96,7 @@ syntax keyword pyKeyword class conceal cchar=¶
 syntax keyword pyKeyword assert conceal cchar=‼
 syntax match pyKeyword /yield from/ conceal cchar=⇄
 syntax keyword pyKeyword yield conceal cchar=⇇
+syntax keyword pyKeyword self conceal cchar=♀
 " Types
 " TODO disable conceal if followed by left paren
 "
