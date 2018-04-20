@@ -61,6 +61,7 @@ syntax keyword pyKeyword nu conceal cchar=ν
 syntax keyword pyKeyword Xi conceal cchar=Ξ
 syntax keyword pyKeyword xi conceal cchar=ξ
 syntax keyword pyKeyword Pi conceal cchar=Π
+syntax match   pyKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 syntax keyword pyKeyword rho conceal cchar=ρ
 syntax keyword pyKeyword sigma conceal cchar=σ
 syntax keyword pyKeyword tau conceal cchar=τ
@@ -72,8 +73,31 @@ syntax keyword pyKeyword Psi conceal cchar=Ψ
 syntax keyword pyKeyword psi conceal cchar=ψ
 syntax keyword pyKeyword Omega conceal cchar=Ω
 syntax keyword pyKeyword omega conceal cchar=ω
-
 syntax keyword pyKeyword nabla conceal cchar=∇
+
+
+syntax keyword pyKeyword ALPHA conceal cchar=α
+syntax keyword pyKeyword BETA conceal cchar=β
+syntax keyword pyKeyword GAMMA conceal cchar=γ
+syntax keyword pyKeyword DELTA conceal cchar=δ
+syntax keyword pyKeyword EPSILON conceal cchar=ε
+syntax keyword pyKeyword ZETA conceal cchar=ζ
+syntax keyword pyKeyword ETA conceal cchar=η
+syntax keyword pyKeyword THETA conceal cchar=θ
+syntax keyword pyKeyword KAPPA conceal cchar=κ
+syntax keyword pyKeyword LAMBDA conceal cchar=λ
+syntax keyword pyKeyword MU conceal cchar=μ
+syntax keyword pyKeyword NU conceal cchar=ν
+syntax keyword pyKeyword XI conceal cchar=ξ
+syntax keyword pyKeyword RHO conceal cchar=ρ
+syntax keyword pyKeyword SIGMA conceal cchar=σ
+syntax keyword pyKeyword TAU conceal cchar=τ
+syntax keyword pyKeyword UPSILON conceal cchar=υ
+syntax keyword pyKeyword PHI conceal cchar=φ
+syntax keyword pyKeyword CHI conceal cchar=χ
+syntax keyword pyKeyword PSI conceal cchar=ψ
+syntax keyword pyKeyword OMEGA conceal cchar=ω
+syntax keyword pyKeyword NABLA conceal cchar=∇
 
 " like APL
 syntax keyword pyKeyword range conceal cchar=⍳
@@ -139,8 +163,6 @@ syntax match pyType /tf\.int64/ conceal cchar=ℤ
 syntax match pyKeyword /np\.arange/ conceal cchar=⍳
 syntax match pyKeyword /torch\.arange/ conceal cchar=⍳
 syntax match pyKeyword /arange/ conceal cchar=⍳
-
-syntax match pyKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 
 highlight! link pyBuiltin pyOperator
 highlight! link pyOperator Operator
