@@ -136,9 +136,9 @@ syntax match pyType /np\.ndarray/ conceal cchar=V
 
 syntax match pyType /tf\.Tensor/ conceal cchar=𝕋
 syntax match pyType /torch\.Tensor/ conceal cchar=𝕋
-syntax match pyType /torch\.Variable/ conceal cchar=𝕋
+syntax match pyType /torch\.Variable/ conceal cchar=𝕍	
 syntax keyword pyType Tensor conceal cchar=𝕋
-syntax keyword pyType Variable conceal cchar=𝕋
+syntax keyword pyType Variable conceal cchar=𝕍	
 
 syntax keyword pyType float conceal cchar=ℝ
 syntax match pyType /np\.float/ conceal cchar=ℝ
