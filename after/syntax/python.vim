@@ -101,6 +101,8 @@ syntax keyword pyKeyword NABLA conceal cchar=∇
 
 " like APL
 syntax keyword pyKeyword range conceal cchar=⍳
+syntax keyword pyKeyword enumerate conceal cchar=ℇ
+
 
 syntax keyword pyConstant None conceal cchar=∅
 " http://www.fileformat.info/info/unicode/block/geometric_shapes/images.htm
