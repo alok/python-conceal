@@ -14,6 +14,50 @@ silent! syntax clear pythonOperator
 "
 " syntax match pyOperator "\%(is \)\@<!\<not\%( \|\>\)" conceal cchar=¬
 
+" Subscripts
+
+" Matches x0 -> x₀ A2 -> A₂
+" Use ms=s+1 to avoid concealing the letter before the number
+syntax match Normal '\v<[a-zA-Z]0>'ms=s+1 conceal cchar=₀
+syntax match Normal '\v<[a-zA-Z]1>'ms=s+1 conceal cchar=₁
+syntax match Normal '\v<[a-zA-Z]2>'ms=s+1 conceal cchar=₂
+syntax match Normal '\v<[a-zA-Z]3>'ms=s+1 conceal cchar=₃
+syntax match Normal '\v<[a-zA-Z]4>'ms=s+1 conceal cchar=₄
+syntax match Normal '\v<[a-zA-Z]5>'ms=s+1 conceal cchar=₅
+syntax match Normal '\v<[a-zA-Z]6>'ms=s+1 conceal cchar=₆
+syntax match Normal '\v<[a-zA-Z]7>'ms=s+1 conceal cchar=₇
+syntax match Normal '\v<[a-zA-Z]8>'ms=s+1 conceal cchar=₈
+syntax match Normal '\v<[a-zA-Z]9>'ms=s+1 conceal cchar=₉
+
+" Numbers
+syntax match Normal '\v_0>' conceal cchar=₀
+syntax match Normal '\v_1>' conceal cchar=₁
+syntax match Normal '\v_2>' conceal cchar=₂
+syntax match Normal '\v_3>' conceal cchar=₃
+syntax match Normal '\v_4>' conceal cchar=₄
+syntax match Normal '\v_5>' conceal cchar=₅
+syntax match Normal '\v_6>' conceal cchar=₆
+syntax match Normal '\v_7>' conceal cchar=₇
+syntax match Normal '\v_8>' conceal cchar=₈
+syntax match Normal '\v_9>' conceal cchar=₉
+" Letters
+syntax match Normal '\v_[aA]>' conceal cchar=ₐ
+syntax match Normal '\v_[lL]>' conceal cchar=ₗ
+syntax match Normal '\v_[pP]>' conceal cchar=ₚ
+syntax match Normal '\v_[rR]>' conceal cchar=ᵣ
+syntax match Normal '\v_[sS]>' conceal cchar=ₛ
+syntax match Normal '\v_[uU]>' conceal cchar=ᵤ
+syntax match Normal '\v_[vV]>' conceal cchar=ᵥ
+syntax match Normal '\v_[xX]>' conceal cchar=ₓ	
+syntax match Normal '\v_[hH]>' conceal cchar=ₕ
+syntax match Normal '\v_[iI]>' conceal cchar=ᵢ
+syntax match Normal '\v_[jJ]>' conceal cchar=ⱼ
+syntax match Normal '\v_[kK]>' conceal cchar=ₖ
+syntax match Normal '\v_[nN]>' conceal cchar=ₙ
+syntax match Normal '\v_[mM]>' conceal cchar=ₘ
+syntax match Normal '\v_[tT]>' conceal cchar=ₜ
+
+
 " Need to be handled specially for not in to work. Order doesn't matter.
 syntax match pyOperator "\<not in\>" conceal cchar=∉
 syntax match pyOperator "\<in\>" conceal cchar=∈
@@ -24,7 +68,6 @@ syntax match pyOperator "<=" conceal cchar=≤
 syntax match pyOperator ">=" conceal cchar=≥
 
 syntax match pyOperator /\s@\s/ms=s+1,me=e-1 conceal cchar=⊗
-syntax match pySpecial /\s@\s/ms=s+1,me=e-1 conceal cchar=⊗
 syntax match pyOperator /\s\*\s/ms=s+1,me=e-1 conceal cchar=∙
 syntax match pyOperator /\s=\s/ms=s+1,me=e-1 conceal cchar=←
 syntax match pyOperator /\S=\S/ms=s+1,me=e-1 conceal cchar=←
@@ -75,7 +118,6 @@ syntax keyword pyKeyword Omega conceal cchar=Ω
 syntax keyword pyKeyword omega conceal cchar=ω
 syntax keyword pyKeyword nabla conceal cchar=∇
 
-
 syntax keyword pyKeyword ALPHA conceal cchar=α
 syntax keyword pyKeyword BETA conceal cchar=β
 syntax keyword pyKeyword GAMMA conceal cchar=γ
@@ -98,6 +140,8 @@ syntax keyword pyKeyword CHI conceal cchar=χ
 syntax keyword pyKeyword PSI conceal cchar=ψ
 syntax keyword pyKeyword OMEGA conceal cchar=ω
 syntax keyword pyKeyword NABLA conceal cchar=∇
+
+
 
 " like APL
 syntax keyword pyKeyword range conceal cchar=⍳
