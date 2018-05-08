@@ -19,16 +19,16 @@ silent! syntax clear pythonOperator
 
 " Matches x0 -> x₀ A2 -> A₂ word2 -> word₂
 " Use ms=s+1 to avoid concealing the letter before the number
-syntax match Normal '\v<[a-zA-Z]+0>'ms=e conceal cchar=₀
-syntax match Normal '\v<[a-zA-Z]+1>'ms=e conceal cchar=₁
-syntax match Normal '\v<[a-zA-Z]+2>'ms=e conceal cchar=₂
-syntax match Normal '\v<[a-zA-Z]+3>'ms=e conceal cchar=₃
-syntax match Normal '\v<[a-zA-Z]+4>'ms=e conceal cchar=₄
-syntax match Normal '\v<[a-zA-Z]+5>'ms=e conceal cchar=₅
-syntax match Normal '\v<[a-zA-Z]+6>'ms=e conceal cchar=₆
-syntax match Normal '\v<[a-zA-Z]+7>'ms=e conceal cchar=₇
-syntax match Normal '\v<[a-zA-Z]+8>'ms=e conceal cchar=₈
-syntax match Normal '\v<[a-zA-Z]+9>'ms=e conceal cchar=₉
+syntax match Normal '\v<[[:alpha:]]+0>'ms=e conceal cchar=₀
+syntax match Normal '\v<[[:alpha:]]+1>'ms=e conceal cchar=₁
+syntax match Normal '\v<[[:alpha:]]+2>'ms=e conceal cchar=₂
+syntax match Normal '\v<[[:alpha:]]+3>'ms=e conceal cchar=₃
+syntax match Normal '\v<[[:alpha:]]+4>'ms=e conceal cchar=₄
+syntax match Normal '\v<[[:alpha:]]+5>'ms=e conceal cchar=₅
+syntax match Normal '\v<[[:alpha:]]+6>'ms=e conceal cchar=₆
+syntax match Normal '\v<[[:alpha:]]+7>'ms=e conceal cchar=₇
+syntax match Normal '\v<[[:alpha:]]+8>'ms=e conceal cchar=₈
+syntax match Normal '\v<[[:alpha:]]+9>'ms=e conceal cchar=₉
 
 " Numbers
 syntax match Normal '\v_0>' conceal cchar=₀
