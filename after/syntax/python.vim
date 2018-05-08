@@ -83,6 +83,22 @@ syntax match pyOperator "\<\%(math\.\|\)ceil\>" conceal cchar=⌈
 " The following are special cases where it *may* be okay to ignore PEP8
 syntax match pyOperator "\( \|\)\*\*\( \|\)2\>" conceal cchar=²
 syntax match pyOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
+syntax match pyOperator "\( \|\)\*\*\( \|\)i\>" conceal cchar=ⁱ	
+syntax match pyOperator "\( \|\)\*\*\( \|\)j\>" conceal cchar=ʲ
+syntax match pyOperator "\( \|\)\*\*\( \|\)k\>" conceal cchar=ᵏ
+syntax match pyOperator "\( \|\)\*\*\( \|\)t\>" conceal cchar=ᵗ
+syntax match pyOperator "\( \|\)\*\*\( \|\)x\>" conceal cchar=ˣ
+syntax match pyOperator "\( \|\)\*\*\( \|\)y\>" conceal cchar=ʸ
+syntax match pyOperator "\( \|\)\*\*\( \|\)z\>" conceal cchar=ᶻ
+syntax match pyOperator "\( \|\)\*\*\( \|\)a\>" conceal cchar=ᵃ
+syntax match pyOperator "\( \|\)\*\*\( \|\)b\>" conceal cchar=ᵇ
+syntax match pyOperator "\( \|\)\*\*\( \|\)c\>" conceal cchar=ᶜ
+syntax match pyOperator "\( \|\)\*\*\( \|\)d\>" conceal cchar=ᵈ
+syntax match pyOperator "\( \|\)\*\*\( \|\)e\>" conceal cchar=ᵉ
+syntax match pyOperator "\( \|\)\*\*\( \|\)p\>" conceal cchar=ᵖ
+syntax match pyOperator "\( \|\)\*\*\( \|\)l\>" conceal cchar=ˡ
+syntax match pyOperator "\( \|\)\*\*\( \|\)m\>" conceal cchar=ᵐ
+
 " I have no idea how these work, but I got the transpose working by copying.
 syntax match pyOperator "\( \|\)\.\( \|\)T\>" conceal cchar=ᵀ
 
