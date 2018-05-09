@@ -19,16 +19,16 @@ silent! syntax clear pythonOperator
 
 " Matches x0 -> x₀ A2 -> A₂ word2 -> word₂
 " Use ms=s+1 to avoid concealing the letter before the number
-syntax match Normal '\v<[[:alpha:]_]+[^_]0>'ms=e conceal cchar=₀
-syntax match Normal '\v<[[:alpha:]_]+[^_]1>'ms=e conceal cchar=₁
-syntax match Normal '\v<[[:alpha:]_]+[^_]2>'ms=e conceal cchar=₂
-syntax match Normal '\v<[[:alpha:]_]+[^_]3>'ms=e conceal cchar=₃
-syntax match Normal '\v<[[:alpha:]_]+[^_]4>'ms=e conceal cchar=₄
-syntax match Normal '\v<[[:alpha:]_]+[^_]5>'ms=e conceal cchar=₅
-syntax match Normal '\v<[[:alpha:]_]+[^_]6>'ms=e conceal cchar=₆
-syntax match Normal '\v<[[:alpha:]_]+[^_]7>'ms=e conceal cchar=₇
-syntax match Normal '\v<[[:alpha:]_]+[^_]8>'ms=e conceal cchar=₈
-syntax match Normal '\v<[[:alpha:]_]+[^_]9>'ms=e conceal cchar=₉
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]0>'ms=e conceal cchar=₀
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]1>'ms=e conceal cchar=₁
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]2>'ms=e conceal cchar=₂
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]3>'ms=e conceal cchar=₃
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]4>'ms=e conceal cchar=₄
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]5>'ms=e conceal cchar=₅
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]6>'ms=e conceal cchar=₆
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]7>'ms=e conceal cchar=₇
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]8>'ms=e conceal cchar=₈
+syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]9>'ms=e conceal cchar=₉
 
 " Numbers
 syntax match Normal '\v_0>' conceal cchar=₀
