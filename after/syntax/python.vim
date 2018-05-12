@@ -19,28 +19,28 @@ silent! syntax clear pythonOperator
 
 " Matches x0 -> x₀ A2 -> A₂ word2 -> word₂
 " Use ms=s+1 to avoid concealing the letter before the number
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*0>'ms=e conceal cchar=₀
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*1>'ms=e conceal cchar=₁
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*2>'ms=e conceal cchar=₂
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*3>'ms=e conceal cchar=₃
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*4>'ms=e conceal cchar=₄
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*5>'ms=e conceal cchar=₅
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*6>'ms=e conceal cchar=₆
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*7>'ms=e conceal cchar=₇
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*8>'ms=e conceal cchar=₈
-syntax match Normal '\v<[[:alpha:]_]+[^_[:digit:]]*9>'ms=e conceal cchar=₉
+syntax match Normal '\v<[[:alpha:]_]+0>'ms=e conceal cchar=₀
+syntax match Normal '\v<[[:alpha:]_]+1>'ms=e conceal cchar=₁
+syntax match Normal '\v<[[:alpha:]_]+2>'ms=e conceal cchar=₂
+syntax match Normal '\v<[[:alpha:]_]+3>'ms=e conceal cchar=₃
+syntax match Normal '\v<[[:alpha:]_]+4>'ms=e conceal cchar=₄
+syntax match Normal '\v<[[:alpha:]_]+5>'ms=e conceal cchar=₅
+syntax match Normal '\v<[[:alpha:]_]+6>'ms=e conceal cchar=₆
+syntax match Normal '\v<[[:alpha:]_]+7>'ms=e conceal cchar=₇
+syntax match Normal '\v<[[:alpha:]_]+8>'ms=e conceal cchar=₈
+syntax match Normal '\v<[[:alpha:]_]+9>'ms=e conceal cchar=₉
 
 " Numbers
-syntax match Normal '\v_0>' conceal cchar=₀
-syntax match Normal '\v_1>' conceal cchar=₁
-syntax match Normal '\v_2>' conceal cchar=₂
-syntax match Normal '\v_3>' conceal cchar=₃
-syntax match Normal '\v_4>' conceal cchar=₄
-syntax match Normal '\v_5>' conceal cchar=₅
-syntax match Normal '\v_6>' conceal cchar=₆
-syntax match Normal '\v_7>' conceal cchar=₇
-syntax match Normal '\v_8>' conceal cchar=₈
-syntax match Normal '\v_9>' conceal cchar=₉
+syntax match Normal '\v[^_]_0>' conceal cchar=₀
+syntax match Normal '\v[^_]_1>' conceal cchar=₁
+syntax match Normal '\v[^_]_2>' conceal cchar=₂
+syntax match Normal '\v[^_]_3>' conceal cchar=₃
+syntax match Normal '\v[^_]_4>' conceal cchar=₄
+syntax match Normal '\v[^_]_5>' conceal cchar=₅
+syntax match Normal '\v[^_]_6>' conceal cchar=₆
+syntax match Normal '\v[^_]_7>' conceal cchar=₇
+syntax match Normal '\v[^_]_8>' conceal cchar=₈
+syntax match Normal '\v[^_]_9>' conceal cchar=₉
 " Letters
 syntax match Normal '\v_[aA]>' conceal cchar=ₐ
 syntax match Normal '\v_[lL]>' conceal cchar=ₗ
