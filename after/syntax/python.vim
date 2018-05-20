@@ -103,6 +103,9 @@ syntax match pyOperator "\( \|\)\*\*\( \|\)m\>" conceal cchar=ᵐ
 " I have no idea how these work, but I got the transpose working by copying.
 syntax match pyOperator "\( \|\)\.\( \|\)T\>" conceal cchar=ᵀ
 
+syntax match pyOperator "<<" conceal cchar=≺
+syntax match pyOperator ">>" conceal cchar=≻
+
 syntax keyword pyKeyword alpha conceal cchar=α
 syntax keyword pyKeyword beta conceal cchar=β
 syntax keyword pyKeyword Gamma conceal cchar=Γ
@@ -112,7 +115,7 @@ syntax keyword pyKeyword delta conceal cchar=δ
 syntax keyword pyKeyword epsilon conceal cchar=ε
 syntax keyword pyKeyword zeta conceal cchar=ζ
 syntax keyword pyKeyword eta conceal cchar=η
-syntax keyword pyKeyword Theta conceal cchar=ϴ
+syntax keyword pyKeyword Theta conceal cchar=Θ
 syntax keyword pyKeyword theta conceal cchar=θ
 syntax keyword pyKeyword kappa conceal cchar=κ
 syntax keyword pyKeyword lambda conceal cchar=λ
@@ -120,8 +123,6 @@ syntax keyword pyKeyword mu conceal cchar=μ
 syntax keyword pyKeyword nu conceal cchar=ν
 syntax keyword pyKeyword Xi conceal cchar=Ξ
 syntax keyword pyKeyword xi conceal cchar=ξ
-syntax keyword pyKeyword Pi conceal cchar=Π
-syntax match   pyKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 syntax keyword pyKeyword rho conceal cchar=ρ
 syntax keyword pyKeyword sigma conceal cchar=σ
 syntax keyword pyKeyword tau conceal cchar=τ
@@ -133,32 +134,8 @@ syntax keyword pyKeyword Psi conceal cchar=Ψ
 syntax keyword pyKeyword psi conceal cchar=ψ
 syntax keyword pyKeyword Omega conceal cchar=Ω
 syntax keyword pyKeyword omega conceal cchar=ω
+
 syntax keyword pyKeyword nabla conceal cchar=∇
-
-syntax keyword pyKeyword ALPHA conceal cchar=α
-syntax keyword pyKeyword BETA conceal cchar=β
-syntax keyword pyKeyword GAMMA conceal cchar=γ
-syntax keyword pyKeyword DELTA conceal cchar=δ
-syntax keyword pyKeyword EPSILON conceal cchar=ε
-syntax keyword pyKeyword ZETA conceal cchar=ζ
-syntax keyword pyKeyword ETA conceal cchar=η
-syntax keyword pyKeyword THETA conceal cchar=θ
-syntax keyword pyKeyword KAPPA conceal cchar=κ
-syntax keyword pyKeyword LAMBDA conceal cchar=λ
-syntax keyword pyKeyword MU conceal cchar=μ
-syntax keyword pyKeyword NU conceal cchar=ν
-syntax keyword pyKeyword XI conceal cchar=ξ
-syntax keyword pyKeyword RHO conceal cchar=ρ
-syntax keyword pyKeyword SIGMA conceal cchar=σ
-syntax keyword pyKeyword TAU conceal cchar=τ
-syntax keyword pyKeyword UPSILON conceal cchar=υ
-syntax keyword pyKeyword PHI conceal cchar=φ
-syntax keyword pyKeyword CHI conceal cchar=χ
-syntax keyword pyKeyword PSI conceal cchar=ψ
-syntax keyword pyKeyword OMEGA conceal cchar=ω
-syntax keyword pyKeyword NABLA conceal cchar=∇
-
-
 
 " like APL
 syntax keyword pyKeyword range conceal cchar=⍳
@@ -243,10 +220,11 @@ highlight! link Conceal Operator
 " highlight! link Conceal PreProc
 
 
-setlocal conceallevel=1
+setlocal conceallevel=2
 
 " unused ideas
 
 " syntax keyword pyBuiltin all conceal cchar=∀
 " syntax keyword pyBuiltin any conceal cchar=∃
 "
+
