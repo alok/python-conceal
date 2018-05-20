@@ -177,6 +177,7 @@ syntax keyword pyConstant True conceal cchar=⊤
 syntax keyword pyConstant False conceal cchar=⊥
 syntax keyword pyKeyword for conceal cchar=∀
 syntax keyword pyKeyword while conceal cchar=⥁
+syntax match pyKeyword 'while True' conceal cchar=∞
 
 syntax keyword pyKeyword def conceal cchar=λ
 syntax keyword pyKeyword class conceal cchar=※
