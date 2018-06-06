@@ -171,26 +171,22 @@ syntax keyword pyKeyword yield conceal cchar=⇇
 syntax keyword pyKeyword self conceal cchar=♀
 " Types
 " TODO disable conceal if followed by left paren
-"
-" syntax match pyKeyword /int/ "me=e-1 conceal cchar=ℤ
-" syntax match pyKeyword //int/ ="me=e-2 conceal cchar=ℤ
 
-syntax keyword pyType complex conceal cchar=ℂ
-syntax keyword pyType str conceal cchar=𝐒
-syntax keyword pyType bool conceal cchar=𝔹
+syntax match pyType '\v<complex(\()@!' conceal cchar=ℂ
+syntax match pyType '\v<str(\()@!' conceal cchar=𝐒
+syntax match pyType '\v<bool(\()@!' conceal cchar=𝔹
 
 syntax keyword pyType Vector conceal cchar=V
-syntax match pyType /np\.ndarray/ conceal cchar=V
+syntax match pyType 'np\.ndarray' conceal cchar=V
 
-syntax keyword pyType Tensor conceal cchar=𝕋
-syntax keyword pyType Variable conceal cchar=𝕍	
 syntax match pyType 'tf\.Tensor' conceal cchar=𝕋
 syntax match pyType 'torch\.[tT]ensor' conceal cchar=𝕋
+syntax keyword pyType tensor Tensor conceal cchar=𝕋
 
-syntax keyword pyType float conceal cchar=ℝ
+" Use @! to ensure that type() is not concealed, since that's hard to read
+syntax match pyType '\v<int(\()@!' conceal cchar=ℤ
+syntax match pyType '\v<float(\()@!' conceal cchar=ℝ
 
-
-syntax keyword pyType int conceal cchar=ℤ
 syntax match pyType '(torch|np|tf)\.float(32|64)?' conceal cchar=ℝ
 syntax match pyType '(torch|np|tf)\.int(32|64)?' conceal cchar=ℤ
 
