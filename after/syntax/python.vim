@@ -59,24 +59,23 @@ syntax match Normal '\v_[mM]>' conceal cchar=ₘ
 syntax match Normal '\v_[tT]>' conceal cchar=ₜ
 
 
-" Need to be handled specially for not in to work. Order doesn't matter.
-syntax match pyOperator "\<not in\>" conceal cchar=∉
-syntax match pyOperator "\<in\>" conceal cchar=∈
+" Need to be handled specially for `not in` to work. Order doesn't matter.
+syntax match pyOperator '\v<not in>' conceal cchar=∉
+syntax match pyOperator '\v<in>' conceal cchar=∈
 
 
-syntax match pyOperator "->" conceal cchar=→
-syntax match pyOperator "<=" conceal cchar=≤
-syntax match pyOperator ">=" conceal cchar=≥
+syntax match pyOperator '->' conceal cchar=→
+syntax match pyOperator '<=' conceal cchar=≤
+syntax match pyOperator '>=' conceal cchar=≥
 
-syntax match pyOperator /\s@\s/ms=s+1,me=e-1 conceal cchar=⊗
-syntax match pyOperator /\s\*\s/ms=s+1,me=e-1 conceal cchar=∙
-syntax match pyOperator /\s=\s/ms=s+1,me=e-1 conceal cchar=←
-syntax match pyOperator /\S=\S/ms=s+1,me=e-1 conceal cchar=←
+syntax match pyOperator '\s@\s'ms=s+1,me=e-1 conceal cchar=⊗
+syntax match pyOperator '\s\*\s'ms=s+1,me=e-1 conceal cchar=∙
+syntax match pyOperator '\v\=' conceal cchar=←
+syntax match pyOperator '\v\=@<!\=\=\=@!' conceal cchar=≝
 
-" only conceal “==” if alone, to avoid concealing merge conflict markers
-syntax match pyOperator "=\@<!===\@!" conceal cchar=≝
-syntax match pyOperator "!=" conceal cchar=≠
 
+" only conceal `==` if alone, to avoid concealing merge conflict markers
+syntax match pyOperator '!=' conceal cchar=≠
 
 
 syntax match pyKeyword '\v<((math|torch|np|tf)\.)?ceil>' conceal cchar=⌈
@@ -84,8 +83,6 @@ syntax match pyKeyword '\v<((math|torch|np|tf)\.)?floor>' conceal cchar=⌊
 syntax match pyKeyword '\v<((math|np)\.)?e>' conceal cchar=ℯ
 
 
-syntax match pyOperator "<<" conceal cchar=≺
-syntax match pyOperator ">>" conceal cchar=≻
 
 syntax match pyOperator '\v ?\*\* ?2>' conceal cchar=²
 syntax match pyOperator '\v ?\*\* ?n>' conceal cchar=ⁿ
@@ -165,8 +162,8 @@ syntax match pyKeyword 'while True' conceal cchar=∞
 
 syntax keyword pyKeyword def conceal cchar=λ
 syntax keyword pyKeyword class conceal cchar=※
-syntax match pyKeyword /yield from/ conceal cchar=⇄
 syntax keyword pyKeyword assert conceal cchar=‽
+syntax match pyKeyword 'yield from' conceal cchar=⇄
 syntax keyword pyKeyword yield conceal cchar=⇇
 syntax keyword pyKeyword self conceal cchar=♀
 " Types
