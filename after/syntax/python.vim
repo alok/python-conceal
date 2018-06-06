@@ -78,14 +78,12 @@ syntax match pyOperator '\v\=@<!\=\=\=@!' conceal cchar=≝
 syntax match pyOperator '!=' conceal cchar=≠
 
 
-syntax match pyKeyword '\v<((math|torch|np|tf)\.)?ceil>' conceal cchar=⌈
-syntax match pyKeyword '\v<((math|torch|np|tf)\.)?floor>' conceal cchar=⌊
-syntax match pyKeyword '\v<((math|np)\.)?e>' conceal cchar=ℯ
+syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?ceil>' conceal cchar=⌈
+syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?floor>' conceal cchar=⌊
+syntax match pyKeyword '\v<((math|np|scipy|sp)\.)?e>' conceal cchar=ℯ
 
-syntax match pyKeyword '\v<((math|torch|np|tf)\.)?pi>' conceal cchar=π
-syntax match pyKeyword '<torch\.mean>' conceal cchar=𝔼
-syntax match pyKeyword '<np\.mean>' conceal cchar=𝔼
-syntax match pyKeyword '<tf\.reduce_mean>' conceal cchar=𝔼
+syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?pi>' conceal cchar=π
+syntax match pyKeyword '\v<((torch|np|scipy|sp)\.mean)|(tf\.reduce_mean)>' conceal cchar=𝔼
 
 
 syntax match pyOperator '\v ?\*\* ?2>' conceal cchar=²
@@ -131,7 +129,6 @@ syntax keyword pyKeyword nu NU conceal cchar=ν
 syntax keyword pyKeyword Xi conceal cchar=Ξ
 syntax keyword pyKeyword xi XI conceal cchar=ξ
 syntax keyword pyKeyword Pi conceal cchar=Π
-syntax match   pyKeyword '\v<((math|torch|np|tf)\.)?pi>' conceal cchar=π
 syntax keyword pyKeyword rho RHO conceal cchar=ρ
 syntax keyword pyKeyword sigma SIGMA conceal cchar=σ
 syntax keyword pyKeyword tau TAU conceal cchar=τ
@@ -178,7 +175,7 @@ syntax match pyType '\v<str(\()@!' conceal cchar=𝐒
 syntax match pyType '\v<bool(\()@!' conceal cchar=𝔹
 
 syntax keyword pyType Vector conceal cchar=V
-syntax match pyType 'np\.ndarray' conceal cchar=V
+syntax match pyType '(np|scipy|sp)\.ndarray' conceal cchar=V
 
 syntax match pyType 'tf\.Tensor' conceal cchar=𝕋
 syntax match pyType 'torch\.[tT]ensor' conceal cchar=𝕋
@@ -188,10 +185,10 @@ syntax keyword pyType tensor Tensor conceal cchar=𝕋
 syntax match pyType '\v<int(\()@!' conceal cchar=ℤ
 syntax match pyType '\v<float(\()@!' conceal cchar=ℝ
 
-syntax match pyType '(torch|np|tf)\.float(32|64)?' conceal cchar=ℝ
-syntax match pyType '(torch|np|tf)\.int(32|64)?' conceal cchar=ℤ
+syntax match pyType '(torch|np|tf|scipy|sp)\.float(32|64)?' conceal cchar=ℝ
+syntax match pyType '(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
 
-syntax match pyKeyword '((np|torch)\.)?arange' conceal cchar=⍳
+syntax match pyKeyword '((np|scipy|sp|torch)\.)?arange' conceal cchar=⍳
 
 syntax keyword pyBuiltin all
 syntax keyword pyBuiltin any conceal cchar=∃
