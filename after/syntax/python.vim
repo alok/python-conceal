@@ -82,6 +82,10 @@ syntax match pyKeyword '\v<((math|torch|np|tf)\.)?ceil>' conceal cchar=⌈
 syntax match pyKeyword '\v<((math|torch|np|tf)\.)?floor>' conceal cchar=⌊
 syntax match pyKeyword '\v<((math|np)\.)?e>' conceal cchar=ℯ
 
+syntax match pyKeyword '\v<((math|torch|np|tf)\.)?pi>' conceal cchar=π
+syntax match pyKeyword '<torch\.mean>' conceal cchar=𝔼
+syntax match pyKeyword '<np\.mean>' conceal cchar=𝔼
+syntax match pyKeyword '<tf\.reduce_mean>' conceal cchar=𝔼
 
 
 syntax match pyOperator '\v ?\*\* ?2>' conceal cchar=²
