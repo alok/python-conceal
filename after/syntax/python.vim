@@ -78,36 +78,34 @@ syntax match pyOperator "=\@<!===\@!" conceal cchar=≝
 syntax match pyOperator "!=" conceal cchar=≠
 
 
-syntax match pyOperator "\<\%(math\.\|\)ceil\>" conceal cchar=⌈
- syntax match pyOperator "\<\%(math\.\|\)floor\>" conceal cchar=⌊
 
-" The following are special cases where it *may* be okay to ignore PEP8
-syntax match pyOperator "\( \|\)\*\*\( \|\)2\>" conceal cchar=²
-syntax match pyOperator "\( \|\)\*\*\( \|\)n\>" conceal cchar=ⁿ
-syntax match pyOperator "\( \|\)\*\*\( \|\)i\>" conceal cchar=ⁱ	
-syntax match pyOperator "\( \|\)\*\*\( \|\)j\>" conceal cchar=ʲ
-syntax match pyOperator "\( \|\)\*\*\( \|\)k\>" conceal cchar=ᵏ
-syntax match pyOperator "\( \|\)\*\*\( \|\)t\>" conceal cchar=ᵗ
-syntax match pyOperator "\( \|\)\*\*\( \|\)x\>" conceal cchar=ˣ
-syntax match pyOperator "\( \|\)\*\*\( \|\)y\>" conceal cchar=ʸ
-syntax match pyOperator "\( \|\)\*\*\( \|\)z\>" conceal cchar=ᶻ
-syntax match pyOperator "\( \|\)\*\*\( \|\)a\>" conceal cchar=ᵃ
-syntax match pyOperator "\( \|\)\*\*\( \|\)b\>" conceal cchar=ᵇ
-syntax match pyOperator "\( \|\)\*\*\( \|\)c\>" conceal cchar=ᶜ
-syntax match pyOperator "\( \|\)\*\*\( \|\)d\>" conceal cchar=ᵈ
-syntax match pyOperator "\( \|\)\*\*\( \|\)e\>" conceal cchar=ᵉ
-syntax match pyOperator "\( \|\)\*\*\( \|\)p\>" conceal cchar=ᵖ
-syntax match pyOperator "\( \|\)\*\*\( \|\)l\>" conceal cchar=ˡ
-syntax match pyOperator "\( \|\)\*\*\( \|\)m\>" conceal cchar=ᵐ
+syntax match pyKeyword '\v<((math|torch|np|tf)\.)?ceil>' conceal cchar=⌈
+syntax match pyKeyword '\v<((math|torch|np|tf)\.)?floor>' conceal cchar=⌊
+syntax match pyKeyword '\v<((math|np)\.)?e>' conceal cchar=ℯ
 
-" I have no idea how these work, but I got the transpose working by copying.
-syntax match pyOperator "\( \|\)\.\( \|\)T\>" conceal cchar=ᵀ
 
 syntax match pyOperator "<<" conceal cchar=≺
 syntax match pyOperator ">>" conceal cchar=≻
 
 syntax keyword pyKeyword alpha conceal cchar=α
 syntax keyword pyKeyword beta conceal cchar=β
+syntax match pyOperator '\v ?\*\* ?2>' conceal cchar=²
+syntax match pyOperator '\v ?\*\* ?n>' conceal cchar=ⁿ
+syntax match pyOperator '\v ?\*\* ?i>' conceal cchar=ⁱ	
+syntax match pyOperator '\v ?\*\* ?j>' conceal cchar=ʲ
+syntax match pyOperator '\v ?\*\* ?k>' conceal cchar=ᵏ
+syntax match pyOperator '\v ?\*\* ?t>' conceal cchar=ᵗ
+syntax match pyOperator '\v ?\*\* ?x>' conceal cchar=ˣ
+syntax match pyOperator '\v ?\*\* ?y>' conceal cchar=ʸ
+syntax match pyOperator '\v ?\*\* ?z>' conceal cchar=ᶻ
+syntax match pyOperator '\v ?\*\* ?a>' conceal cchar=ᵃ
+syntax match pyOperator '\v ?\*\* ?b>' conceal cchar=ᵇ
+syntax match pyOperator '\v ?\*\* ?c>' conceal cchar=ᶜ
+syntax match pyOperator '\v ?\*\* ?d>' conceal cchar=ᵈ
+syntax match pyOperator '\v ?\*\* ?e>' conceal cchar=ᵉ
+syntax match pyOperator '\v ?\*\* ?p>' conceal cchar=ᵖ
+syntax match pyOperator '\v ?\*\* ?l>' conceal cchar=ˡ
+syntax match pyOperator '\v ?\*\* ?m>' conceal cchar=ᵐ
 syntax keyword pyKeyword Gamma conceal cchar=Γ
 syntax keyword pyKeyword gamma conceal cchar=γ
 syntax keyword pyKeyword Delta conceal cchar=Δ
@@ -124,11 +122,11 @@ syntax keyword pyKeyword nu conceal cchar=ν
 syntax keyword pyKeyword Xi conceal cchar=Ξ
 syntax keyword pyKeyword xi conceal cchar=ξ
 syntax keyword pyKeyword Pi conceal cchar=Π
-syntax match   pyKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
 syntax keyword pyKeyword rho conceal cchar=ρ
 syntax keyword pyKeyword sigma conceal cchar=σ
 syntax keyword pyKeyword tau conceal cchar=τ
 syntax keyword pyKeyword upsilon conceal cchar=υ
+syntax match   pyKeyword '\v<((math|torch|np|tf)\.)?pi>' conceal cchar=π
 syntax keyword pyKeyword Phi conceal cchar=Φ
 syntax keyword pyKeyword phi conceal cchar=φ
 syntax keyword pyKeyword chi conceal cchar=χ
@@ -199,35 +197,20 @@ syntax keyword pyType bool conceal cchar=𝔹
 syntax keyword pyType Vector conceal cchar=V
 syntax match pyType /np\.ndarray/ conceal cchar=V
 
-syntax match pyType /tf\.Tensor/ conceal cchar=𝕋
-syntax match pyType /torch\.Tensor/ conceal cchar=𝕋
-syntax match pyType /torch\.Variable/ conceal cchar=𝕍	
 syntax keyword pyType Tensor conceal cchar=𝕋
 syntax keyword pyType Variable conceal cchar=𝕍	
+syntax match pyType 'tf\.Tensor' conceal cchar=𝕋
+syntax match pyType 'torch\.[tT]ensor' conceal cchar=𝕋
 
 syntax keyword pyType float conceal cchar=ℝ
-syntax match pyType /np\.float/ conceal cchar=ℝ
-syntax match pyType /np\.float32/ conceal cchar=ℝ
-syntax match pyType /np\.float64/ conceal cchar=ℝ
 
-syntax match pyType /tf\.float/ conceal cchar=ℝ
-syntax match pyType /tf\.float32/ conceal cchar=ℝ
-syntax match pyType /tf\.float64/ conceal cchar=ℝ
 
 syntax keyword pyType int conceal cchar=ℤ
+syntax match pyType '(torch|np|tf)\.float(32|64)?' conceal cchar=ℝ
+syntax match pyType '(torch|np|tf)\.int(32|64)?' conceal cchar=ℤ
 
-syntax match pyType /np\.int/ conceal cchar=ℤ
-syntax match pyType /np\.int32/ conceal cchar=ℤ
-syntax match pyType /np\.int64/ conceal cchar=ℤ
+syntax match pyKeyword '((np|torch)\.)?arange' conceal cchar=⍳
 
-syntax match pyType /tf\.int/ conceal cchar=ℤ
-syntax match pyType /tf\.int32/ conceal cchar=ℤ
-syntax match pyType /tf\.int64/ conceal cchar=ℤ
-
-
-syntax match pyKeyword /np\.arange/ conceal cchar=⍳
-syntax match pyKeyword /torch\.arange/ conceal cchar=⍳
-syntax match pyKeyword /arange/ conceal cchar=⍳
 
 highlight! link pyBuiltin pyOperator
 highlight! link pyOperator Operator
