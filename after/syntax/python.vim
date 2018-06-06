@@ -80,6 +80,7 @@ syntax match pyOperator '!=' conceal cchar=≠
 
 syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?ceil>' conceal cchar=⌈
 syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?floor>' conceal cchar=⌊
+syntax match pyKeyword '\v<((torch|np|tf|scipy|sp)\.)?eye>' conceal cchar=𝕀
 syntax match pyKeyword '\v<((math|np|scipy|sp)\.)?e>' conceal cchar=ℯ
 
 syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?pi>' conceal cchar=π
@@ -109,6 +110,9 @@ syntax match pyOperator '\v\.t\(\)' conceal cchar=ᵀ
 syntax match pyOperator '\v\.T>' conceal cchar=ᵀ
 
 syntax match pyOperator '\v\.inverse\(\)' conceal cchar=⁻
+
+syntax match pyOperator '\v\.reshape>'ms=s conceal cchar=⍋
+
 syntax match pyOperator '<<' conceal cchar=≺
 syntax match pyOperator '>>' conceal cchar=≻
 
