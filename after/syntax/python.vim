@@ -192,6 +192,8 @@ syntax match pyType '(torch|np|tf)\.int(32|64)?' conceal cchar=ℤ
 
 syntax match pyKeyword '((np|torch)\.)?arange' conceal cchar=⍳
 
+syntax keyword pyBuiltin all
+syntax keyword pyBuiltin any conceal cchar=∃
 
 highlight! link pyBuiltin pyOperator
 highlight! link pyOperator Operator
@@ -211,8 +213,4 @@ highlight! link Conceal Operator
 setlocal conceallevel=2
 
 " unused ideas
-
-" syntax keyword pyBuiltin all conceal cchar=∀
-" syntax keyword pyBuiltin any conceal cchar=∃
-"
 
