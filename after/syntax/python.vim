@@ -111,7 +111,7 @@ syntax match pyOperator '\v\.T>' conceal cchar=ᵀ
 
 syntax match pyOperator '\v\.inverse\(\)' conceal cchar=⁻
 
-syntax match pyOperator '\v\.reshape>'ms=s conceal cchar=⍋
+syntax match pyOperator '\v\.reshape>'ms=s conceal cchar=₌
 
 syntax match pyOperator '<<' conceal cchar=≺
 syntax match pyOperator '>>' conceal cchar=≻
@@ -172,28 +172,25 @@ syntax keyword pyKeyword assert conceal cchar=‽
 syntax match pyKeyword 'yield from' conceal cchar=⇄
 syntax keyword pyKeyword yield conceal cchar=⇇
 syntax keyword pyKeyword self conceal cchar=♀
-" Types
-" TODO disable conceal if followed by left paren
 
+syntax keyword pyType Vector conceal cchar=V
+syntax match pyType '(np|scipy|sp)\.ndarray' conceal cchar=V
+syntax match pyType '\vtf\.Tensor' conceal cchar=𝕋
+syntax match pyType '\vtorch\.[tT]ensor' conceal cchar=𝕋
+syntax keyword pyType tensor Tensor conceal cchar=𝕋
+syntax match pyType '\v(torch|np|tf|scipy|sp)\.float(32|64)?' conceal cchar=ℝ
+syntax match pyType '\v(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
+
+" XXX These have to be after all the float{16,32} stuff to avoid accidental
+" capture. Use @! to ensure that type casts are not concealed, since that's
+" hard to read.
+syntax match pyType '\v<int(\()@!' conceal cchar=ℤ
+syntax match pyType '\v<float(\()@!' conceal cchar=ℝ
 syntax match pyType '\v<complex(\()@!' conceal cchar=ℂ
 syntax match pyType '\v<str(\()@!' conceal cchar=𝐒
 syntax match pyType '\v<bool(\()@!' conceal cchar=𝔹
 
-syntax keyword pyType Vector conceal cchar=V
-syntax match pyType '(np|scipy|sp)\.ndarray' conceal cchar=V
-
-syntax match pyType 'tf\.Tensor' conceal cchar=𝕋
-syntax match pyType 'torch\.[tT]ensor' conceal cchar=𝕋
-syntax keyword pyType tensor Tensor conceal cchar=𝕋
-
-" Use @! to ensure that type() is not concealed, since that's hard to read
-syntax match pyType '\v<int(\()@!' conceal cchar=ℤ
-syntax match pyType '\v<float(\()@!' conceal cchar=ℝ
-
-syntax match pyType '(torch|np|tf|scipy|sp)\.float(32|64)?' conceal cchar=ℝ
-syntax match pyType '(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
-
-syntax match pyKeyword '((np|scipy|sp|torch)\.)?arange' conceal cchar=⍳
+syntax match pyKeyword '\v((np|scipy|sp|torch)\.)?arange' conceal cchar=⍳
 
 syntax keyword pyBuiltin all
 syntax keyword pyBuiltin any conceal cchar=∃
