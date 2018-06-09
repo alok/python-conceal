@@ -183,12 +183,12 @@ syntax match pyType '\v(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
 
 " XXX These have to be after all the float{16,32} stuff to avoid accidental
 " capture. Use @! to ensure that type casts are not concealed, since that's
-" hard to read.
-syntax match pyType '\v<int(\()@!' conceal cchar=ℤ
-syntax match pyType '\v<float(\()@!' conceal cchar=ℝ
-syntax match pyType '\v<complex(\()@!' conceal cchar=ℂ
-syntax match pyType '\v<str(\()@!' conceal cchar=𝐒
-syntax match pyType '\v<bool(\()@!' conceal cchar=𝔹
+" hard to read._
+syntax match pyType '\v<int(\(|\S)@!' conceal cchar=ℤ
+syntax match pyType '\v<float(\(|\SS)@!' conceal cchar=ℝ
+syntax match pyType '\v<complex(\(|\S)@!' conceal cchar=ℂ
+syntax match pyType '\v<str(\(|\S)@!' conceal cchar=𝐒
+syntax match pyType '\v<bool(\(|\S)@!' conceal cchar=𝔹
 
 syntax match pyKeyword '\v((np|scipy|sp|torch)\.)?arange' conceal cchar=⍳
 
