@@ -81,7 +81,7 @@ syntax match pyOperator '!=' conceal cchar=≠
 syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?ceil>' conceal cchar=⌈
 syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?floor>' conceal cchar=⌊
 syntax match pyKeyword '\v<((torch|np|tf|scipy|sp)\.)?eye>' conceal cchar=𝕀
-syntax match pyKeyword '\v<((math|np|scipy|sp)\.)?e>' conceal cchar=ℯ
+syntax match pyKeyword '\v<((math|np|scipy|sp)\.)e>' conceal cchar=ℯ
 
 syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?pi>' conceal cchar=π
 syntax match pyKeyword '\v<((torch|np|scipy|sp)\.mean)|(tf\.reduce_mean)>' conceal cchar=𝔼
