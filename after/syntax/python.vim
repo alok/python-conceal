@@ -171,7 +171,7 @@ syntax keyword pyKeyword class conceal cchar=※
 syntax keyword pyKeyword assert conceal cchar=‽
 syntax match pyKeyword 'yield from' conceal cchar=⇄
 syntax keyword pyKeyword yield conceal cchar=⇇
-syntax keyword pyKeyword self conceal cchar=♀
+syntax keyword pyKeyword self conceal cchar=⚕
 
 syntax keyword pyType Vector conceal cchar=V
 syntax match pyType '(np|scipy|sp)\.ndarray' conceal cchar=V
