@@ -111,7 +111,7 @@ syntax match pyOperator '\v\.T>' conceal cchar=ᵀ
 
 syntax match pyOperator '\v\.inverse\(\)' conceal cchar=⁻
 
-syntax match pyOperator '\v\.reshape>'ms=s conceal cchar=₌
+syntax match pyOperator '\v\.reshape>'ms=s conceal cchar=♚
 
 syntax match pyOperator '<<' conceal cchar=≺
 syntax match pyOperator '>>' conceal cchar=≻
