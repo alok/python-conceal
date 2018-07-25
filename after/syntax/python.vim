@@ -70,7 +70,8 @@ syntax match pyOperator '>=' conceal cchar=≥
 
 syntax match pyOperator '\s@\s'ms=s+1,me=e-1 conceal cchar=⊗
 syntax match pyOperator '\s\*\s'ms=s+1,me=e-1 conceal cchar=∙
-syntax match pyOperator '\v\=' conceal cchar=←
+" syntax match pyOperator '\v(\+|-|*|/|\%)@!\=' conceal cchar=←
+syntax match pyOperator '\v[^-=+*/]\zs\=\ze[^=]' conceal cchar=←
 syntax match pyOperator '\v\=@<!\=\=\=@!' conceal cchar=≝
 
 
