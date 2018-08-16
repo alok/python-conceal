@@ -58,6 +58,8 @@ syntax match Normal '\v_[nN]>' conceal cchar=ₙ
 syntax match Normal '\v_[mM]>' conceal cchar=ₘ
 syntax match Normal '\v_[tT]>' conceal cchar=ₜ
 
+syntax match Normal '\v\[0\]>' conceal cchar=₀
+syntax match Normal '\v\[1\]>' conceal cchar=₁
 
 " Need to be handled specially for `not in` to work. Order doesn't matter.
 syntax match pyOperator '\v<not in>' conceal cchar=∉
