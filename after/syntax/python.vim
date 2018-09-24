@@ -186,11 +186,11 @@ syntax match pyType '\v(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
 "
 " [^\s)] is to avoid the edge case of (x: int) where the right paren would
 " override the int conceal.
-syntax match pyType '\v<int(\(|[^\s):])@!' conceal cchar=ℤ
-syntax match pyType '\v<float(\(|[^\s):])@!' conceal cchar=ℝ
-syntax match pyType '\v<complex(\(|[^\s):])@!' conceal cchar=ℂ
-syntax match pyType '\v<str(\(|[^\s):])@!' conceal cchar=𝐒
-syntax match pyType '\v<bool(\(|[^\s):])@!' conceal cchar=𝔹
+syntax match pyType '\v<int(\(|[^\s)\],:])@!' conceal cchar=ℤ
+syntax match pyType '\v<float(\(|[^\s)\],:])@!' conceal cchar=ℝ
+syntax match pyType '\v<complex(\(|[^\s)\],:])@!' conceal cchar=ℂ
+syntax match pyType '\v<str(\(|[^\s)\],:])@!' conceal cchar=𝐒
+syntax match pyType '\v<bool(\(|[^\s)\],:])@!' conceal cchar=𝔹
 
 syntax match pyKeyword '\v((np|scipy|sp|torch)\.)?arange' conceal cchar=⍳
 
