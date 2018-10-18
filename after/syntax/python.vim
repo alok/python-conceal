@@ -87,23 +87,23 @@ syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?pi>' conceal cchar=π
 syntax match pyKeyword '\v<((torch|np|scipy|sp)\.mean)|(tf\.reduce_mean)>' conceal cchar=𝔼
 
 
-syntax match pyOperator '\v\zs ?\*\* ?2\ze>[^.]' conceal cchar=²
-syntax match pyOperator '\v\zs ?\*\* ?n\ze>[^.]' conceal cchar=ⁿ
-syntax match pyOperator '\v\zs ?\*\* ?i\ze>[^.]' conceal cchar=ⁱ	
-syntax match pyOperator '\v\zs ?\*\* ?j\ze>[^.]' conceal cchar=ʲ
-syntax match pyOperator '\v\zs ?\*\* ?k\ze>[^.]' conceal cchar=ᵏ
-syntax match pyOperator '\v\zs ?\*\* ?t\ze>[^.]' conceal cchar=ᵗ
-syntax match pyOperator '\v\zs ?\*\* ?x\ze>[^.]' conceal cchar=ˣ
-syntax match pyOperator '\v\zs ?\*\* ?y\ze>[^.]' conceal cchar=ʸ
-syntax match pyOperator '\v\zs ?\*\* ?z\ze>[^.]' conceal cchar=ᶻ
-syntax match pyOperator '\v\zs ?\*\* ?a\ze>[^.]' conceal cchar=ᵃ
-syntax match pyOperator '\v\zs ?\*\* ?b\ze>[^.]' conceal cchar=ᵇ
-syntax match pyOperator '\v\zs ?\*\* ?c\ze>[^.]' conceal cchar=ᶜ
-syntax match pyOperator '\v\zs ?\*\* ?d\ze>[^.]' conceal cchar=ᵈ
-syntax match pyOperator '\v\zs ?\*\* ?e\ze>[^.]' conceal cchar=ᵉ
-syntax match pyOperator '\v\zs ?\*\* ?p\ze>[^.]' conceal cchar=ᵖ
-syntax match pyOperator '\v\zs ?\*\* ?l\ze>[^.]' conceal cchar=ˡ
-syntax match pyOperator '\v\zs ?\*\* ?m\ze>[^.]' conceal cchar=ᵐ
+syntax match pyOperator '\v\zs ?\*\* ?2\ze>([^.]|$)' conceal cchar=²
+syntax match pyOperator '\v\zs ?\*\* ?n\ze>([^.]|$)' conceal cchar=ⁿ
+syntax match pyOperator '\v\zs ?\*\* ?i\ze>([^.]|$)' conceal cchar=ⁱ	
+syntax match pyOperator '\v\zs ?\*\* ?j\ze>([^.]|$)' conceal cchar=ʲ
+syntax match pyOperator '\v\zs ?\*\* ?k\ze>([^.]|$)' conceal cchar=ᵏ
+syntax match pyOperator '\v\zs ?\*\* ?t\ze>([^.]|$)' conceal cchar=ᵗ
+syntax match pyOperator '\v\zs ?\*\* ?x\ze>([^.]|$)' conceal cchar=ˣ
+syntax match pyOperator '\v\zs ?\*\* ?y\ze>([^.]|$)' conceal cchar=ʸ
+syntax match pyOperator '\v\zs ?\*\* ?z\ze>([^.]|$)' conceal cchar=ᶻ
+syntax match pyOperator '\v\zs ?\*\* ?a\ze>([^.]|$)' conceal cchar=ᵃ
+syntax match pyOperator '\v\zs ?\*\* ?b\ze>([^.]|$)' conceal cchar=ᵇ
+syntax match pyOperator '\v\zs ?\*\* ?c\ze>([^.]|$)' conceal cchar=ᶜ
+syntax match pyOperator '\v\zs ?\*\* ?d\ze>([^.]|$)' conceal cchar=ᵈ
+syntax match pyOperator '\v\zs ?\*\* ?e\ze>([^.]|$)' conceal cchar=ᵉ
+syntax match pyOperator '\v\zs ?\*\* ?p\ze>([^.]|$)' conceal cchar=ᵖ
+syntax match pyOperator '\v\zs ?\*\* ?l\ze>([^.]|$)' conceal cchar=ˡ
+syntax match pyOperator '\v\zs ?\*\* ?m\ze>([^.]|$)' conceal cchar=ᵐ
 
 " no ending word boundary on parens
 syntax match pyOperator '\v\.t\(\)' conceal cchar=ᵀ
