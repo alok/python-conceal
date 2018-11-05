@@ -61,6 +61,9 @@ syntax match Normal '\v[^_]\zs_[tT]\ze>' conceal cchar=ₜ
 " " Conceal underscores in numeric literals with commas
 " syntax match Constant '\v<\d+\zs_\ze\d+>' conceal cchar=,
 
+" Conceal things like a_ -> a'
+syntax match Operator /\<\@!_\(_*\>\)\@=/ conceal cchar=′
+
 " Need to be handled specially for `not in` to work. Order doesn't matter.
 syntax match pyOperator '\v<not in>' conceal cchar=∉
 syntax match pyOperator '\v<in>' conceal cchar=∈
