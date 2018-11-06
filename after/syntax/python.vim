@@ -62,129 +62,131 @@ syntax match Normal '\v[^_]\zs_[tT]\ze>' conceal cchar=ₜ
 " syntax match Constant '\v<\d+\zs_\ze\d+>' conceal cchar=,
 
 " Conceal things like a_ -> a'
-syntax match Operator '\v(<|[^_])\zs_\ze>' conceal cchar=′
+syntax match Normal '\v[^_]\zs_\ze>' conceal cchar=′
 
 " Need to be handled specially for `not in` to work. Order doesn't matter.
-syntax match pyOperator '\v<not in>' conceal cchar=∉
-syntax match pyOperator '\v<in>' conceal cchar=∈
+syntax match Normal '\v<not in>' conceal cchar=∉
+syntax match Normal '\v<in>' conceal cchar=∈
 
 
-syntax match pyOperator '->' conceal cchar=→
-syntax match pyOperator '<=' conceal cchar=≤
-syntax match pyOperator '>=' conceal cchar=≥
+syntax match Normal '->' conceal cchar=→
+syntax match Normal '<=' conceal cchar=≤
+syntax match Normal '>=' conceal cchar=≥
 
-syntax match pyOperator '\s@\s'ms=s+1,me=e-1 conceal cchar=⊗
-syntax match pyOperator '\s\*\s'ms=s+1,me=e-1 conceal cchar=∙
-" syntax match pyOperator '\v(\+|-|*|/|\%)@!\=' conceal cchar=←
-syntax match pyOperator '\v[^-=+*/]\zs\=\ze[^=]' conceal cchar=←
-syntax match pyOperator '\v\=@<!\=\=\=@!' conceal cchar=≝
+syntax match Normal '\s@\s'ms=s+1,me=e-1 conceal cchar=⊗
+syntax match Normal '\s\*\s'ms=s+1,me=e-1 conceal cchar=∙
+" syntax match Normal '\v(\+|-|*|/|\%)@!\=' conceal cchar=←
+syntax match Normal '\v[^-=+*/]\zs\=\ze[^=]' conceal cchar=←
+syntax match Normal '\v\=@<!\=\=\=@!' conceal cchar=≝
 
 
 " only conceal `==` if alone, to avoid concealing merge conflict markers
-syntax match pyOperator '!=' conceal cchar=≠
+syntax match Normal '!=' conceal cchar=≠
 
 
-syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?ceil>' conceal cchar=⌈
-syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?floor>' conceal cchar=⌊
-syntax match pyKeyword '\v<((torch|np|tf|scipy|sp)\.)?(eye|identity)>' conceal cchar=𝕀
-syntax match pyKeyword '\v<((math|np|scipy|sp)\.)e>' conceal cchar=ℯ
+syntax match Normal '\v<((math|torch|np|tf|scipy|sp)\.)?ceil>' conceal cchar=⌈
+syntax match Normal '\v<((math|torch|np|tf|scipy|sp)\.)?floor>' conceal cchar=⌊
+syntax match Normal '\v<((torch|np|tf|scipy|sp)\.)?(eye|identity)>' conceal cchar=𝕀
+syntax match Normal '\v<((math|np|scipy|sp)\.)e>' conceal cchar=ℯ
 
-syntax match pyKeyword '\v<((math|torch|np|tf|scipy|sp)\.)?pi>' conceal cchar=π
-syntax match pyKeyword '\v<((torch|np|scipy|sp)\.mean)|(tf\.reduce_mean)>' conceal cchar=𝔼
+syntax match Normal '\v<((math|torch|np|tf|scipy|sp)\.)?pi>' conceal cchar=π
+syntax match Normal '\v<((torch|np|scipy|sp)\.mean)|(tf\.reduce_mean)>' conceal cchar=𝔼
 
 
-syntax match pyOperator '\v\zs ?\*\* ?2\ze>([^.]|$)' conceal cchar=²
-syntax match pyOperator '\v\zs ?\*\* ?n\ze>([^.]|$)' conceal cchar=ⁿ
-syntax match pyOperator '\v\zs ?\*\* ?i\ze>([^.]|$)' conceal cchar=ⁱ	
-syntax match pyOperator '\v\zs ?\*\* ?j\ze>([^.]|$)' conceal cchar=ʲ
-syntax match pyOperator '\v\zs ?\*\* ?k\ze>([^.]|$)' conceal cchar=ᵏ
-syntax match pyOperator '\v\zs ?\*\* ?t\ze>([^.]|$)' conceal cchar=ᵗ
-syntax match pyOperator '\v\zs ?\*\* ?x\ze>([^.]|$)' conceal cchar=ˣ
-syntax match pyOperator '\v\zs ?\*\* ?y\ze>([^.]|$)' conceal cchar=ʸ
-syntax match pyOperator '\v\zs ?\*\* ?z\ze>([^.]|$)' conceal cchar=ᶻ
-syntax match pyOperator '\v\zs ?\*\* ?a\ze>([^.]|$)' conceal cchar=ᵃ
-syntax match pyOperator '\v\zs ?\*\* ?b\ze>([^.]|$)' conceal cchar=ᵇ
-syntax match pyOperator '\v\zs ?\*\* ?c\ze>([^.]|$)' conceal cchar=ᶜ
-syntax match pyOperator '\v\zs ?\*\* ?d\ze>([^.]|$)' conceal cchar=ᵈ
-syntax match pyOperator '\v\zs ?\*\* ?e\ze>([^.]|$)' conceal cchar=ᵉ
-syntax match pyOperator '\v\zs ?\*\* ?p\ze>([^.]|$)' conceal cchar=ᵖ
-syntax match pyOperator '\v\zs ?\*\* ?l\ze>([^.]|$)' conceal cchar=ˡ
-syntax match pyOperator '\v\zs ?\*\* ?m\ze>([^.]|$)' conceal cchar=ᵐ
+syntax match Normal '\v\zs ?\*\* ?2\ze>([^.]|$)' conceal cchar=²
+syntax match Normal '\v\zs ?\*\* ?n\ze>([^.]|$)' conceal cchar=ⁿ
+syntax match Normal '\v\zs ?\*\* ?i\ze>([^.]|$)' conceal cchar=ⁱ	
+syntax match Normal '\v\zs ?\*\* ?j\ze>([^.]|$)' conceal cchar=ʲ
+syntax match Normal '\v\zs ?\*\* ?k\ze>([^.]|$)' conceal cchar=ᵏ
+syntax match Normal '\v\zs ?\*\* ?t\ze>([^.]|$)' conceal cchar=ᵗ
+syntax match Normal '\v\zs ?\*\* ?x\ze>([^.]|$)' conceal cchar=ˣ
+syntax match Normal '\v\zs ?\*\* ?y\ze>([^.]|$)' conceal cchar=ʸ
+syntax match Normal '\v\zs ?\*\* ?z\ze>([^.]|$)' conceal cchar=ᶻ
+syntax match Normal '\v\zs ?\*\* ?a\ze>([^.]|$)' conceal cchar=ᵃ
+syntax match Normal '\v\zs ?\*\* ?b\ze>([^.]|$)' conceal cchar=ᵇ
+syntax match Normal '\v\zs ?\*\* ?c\ze>([^.]|$)' conceal cchar=ᶜ
+syntax match Normal '\v\zs ?\*\* ?d\ze>([^.]|$)' conceal cchar=ᵈ
+syntax match Normal '\v\zs ?\*\* ?e\ze>([^.]|$)' conceal cchar=ᵉ
+syntax match Normal '\v\zs ?\*\* ?p\ze>([^.]|$)' conceal cchar=ᵖ
+syntax match Normal '\v\zs ?\*\* ?l\ze>([^.]|$)' conceal cchar=ˡ
+syntax match Normal '\v\zs ?\*\* ?m\ze>([^.]|$)' conceal cchar=ᵐ
 
 " no ending word boundary on parens
-syntax match pyOperator '\v\.t\(\)' conceal cchar=ᵀ
-syntax match pyOperator '\v\.T>' conceal cchar=ᵀ
+syntax match Normal '\v\.t\(\)' conceal cchar=ᵀ
+syntax match Normal '\v\.T>' conceal cchar=ᵀ
 
-syntax match pyOperator '\v\.inverse\(\)' conceal cchar=⁻
+syntax match Normal '\v\.inverse\(\)' conceal cchar=⁻
 
-syntax match pyOperator '\v\.reshape>'ms=s conceal cchar=♚
+syntax match Normal '\v\.reshape>'ms=s conceal cchar=♚
 
-syntax match pyOperator '<<' conceal cchar=≺
-syntax match pyOperator '>>' conceal cchar=≻
+syntax match Normal '<<' conceal cchar=≺
+syntax match Normal '>>' conceal cchar=≻
 
-syntax keyword pyKeyword alpha ALPHA conceal cchar=α
-syntax keyword pyKeyword beta BETA conceal cchar=β
-syntax keyword pyKeyword Gamma conceal cchar=Γ
-syntax keyword pyKeyword gamma GAMMA conceal cchar=γ
-syntax keyword pyKeyword Delta conceal cchar=Δ
-syntax keyword pyKeyword delta DELTA conceal cchar=δ
-syntax keyword pyKeyword epsilon EPSILON conceal cchar=ε
-syntax keyword pyKeyword zeta ZETA conceal cchar=ζ
-syntax keyword pyKeyword eta ETA conceal cchar=η
-syntax keyword pyKeyword Theta conceal cchar=ϴ
-syntax keyword pyKeyword theta THETA conceal cchar=θ
-syntax keyword pyKeyword kappa KAPPA conceal cchar=κ
-syntax keyword pyKeyword lambda LAMBDA lambda_ _lambda conceal cchar=λ
-syntax keyword pyKeyword mu MU conceal cchar=μ
-syntax keyword pyKeyword nu NU conceal cchar=ν
-syntax keyword pyKeyword Xi conceal cchar=Ξ
-syntax keyword pyKeyword xi XI conceal cchar=ξ
-syntax keyword pyKeyword Pi conceal cchar=Π
-syntax keyword pyKeyword rho RHO conceal cchar=ρ
-syntax keyword pyKeyword sigma SIGMA conceal cchar=σ
-syntax keyword pyKeyword tau TAU conceal cchar=τ
-syntax keyword pyKeyword upsilon UPSILON conceal cchar=υ
-syntax keyword pyKeyword Phi conceal cchar=Φ
-syntax keyword pyKeyword phi PHI conceal cchar=φ
-syntax keyword pyKeyword chi CHI conceal cchar=χ
-syntax keyword pyKeyword Psi conceal cchar=Ψ
-syntax keyword pyKeyword psi PSI conceal cchar=ψ
-syntax keyword pyKeyword Omega conceal cchar=Ω
-syntax keyword pyKeyword omega OMEGA conceal cchar=ω
-syntax keyword pyKeyword nabla NABLA conceal cchar=∇
+syntax keyword Normal alpha ALPHA conceal cchar=α
+syntax keyword Normal beta BETA conceal cchar=β
+syntax keyword Normal Gamma conceal cchar=Γ
+syntax keyword Normal gamma GAMMA conceal cchar=γ
+syntax keyword Normal Delta conceal cchar=Δ
+syntax keyword Normal delta DELTA conceal cchar=δ
+syntax keyword Normal epsilon EPSILON conceal cchar=ε
+syntax keyword Normal zeta ZETA conceal cchar=ζ
+syntax keyword Normal eta ETA conceal cchar=η
+syntax keyword Normal Theta conceal cchar=ϴ
+syntax keyword Normal theta THETA conceal cchar=θ
+syntax keyword Normal kappa KAPPA conceal cchar=κ
+syntax keyword Normal lambda LAMBDA lambda_ _lambda conceal cchar=λ
+syntax keyword Normal mu MU conceal cchar=μ
+syntax keyword Normal nu NU conceal cchar=ν
+syntax keyword Normal Xi conceal cchar=Ξ
+syntax keyword Normal xi XI conceal cchar=ξ
+syntax keyword Normal Pi conceal cchar=Π
+syntax keyword Normal rho RHO conceal cchar=ρ
+syntax keyword Normal sigma SIGMA conceal cchar=σ
+syntax keyword Normal tau TAU conceal cchar=τ
+syntax keyword Normal upsilon UPSILON conceal cchar=υ
+syntax keyword Normal Phi conceal cchar=Φ
+syntax keyword Normal phi PHI conceal cchar=φ
+syntax keyword Normal chi CHI conceal cchar=χ
+syntax keyword Normal Psi conceal cchar=Ψ
+syntax keyword Normal psi PSI conceal cchar=ψ
+syntax keyword Normal Omega conceal cchar=Ω
+syntax keyword Normal omega OMEGA conceal cchar=ω
+syntax keyword Normal nabla NABLA conceal cchar=∇
 
 " like APL
-syntax keyword pyKeyword range conceal cchar=⍳
-syntax keyword pyKeyword enumerate conceal cchar=↑
+syntax keyword Normal range conceal cchar=⍳
+syntax keyword Normal enumerate conceal cchar=↑
 
 
-syntax keyword pyConstant None conceal cchar=∅
+syntax keyword Constant None conceal cchar=∅
+syntax keyword Constant True conceal cchar=⊤
+syntax keyword Constant False conceal cchar=⊥
+
 " http://www.fileformat.info/info/unicode/block/geometric_shapes/images.htm
-syntax keyword pyConstant break conceal cchar=◁
-syntax keyword pyKeyword continue conceal cchar=↻
-syntax keyword pyKeyword return conceal cchar=◀
-syntax keyword pyKeyword if conceal cchar=▸
-syntax keyword pyKeyword elif conceal cchar=▹
-syntax keyword pyKeyword else conceal cchar=▪
-syntax keyword pyConstant True conceal cchar=⊤
-syntax keyword pyConstant False conceal cchar=⊥
-syntax keyword pyKeyword for conceal cchar=∀
-syntax keyword pyKeyword while conceal cchar=⥁
+syntax keyword Keyword break conceal cchar=◁
+syntax keyword Keyword continue conceal cchar=↻
+syntax keyword Keyword return conceal cchar=◀
+syntax keyword Keyword if conceal cchar=▸
+syntax keyword Keyword elif conceal cchar=▹
+syntax keyword Keyword else conceal cchar=▪
 
-syntax keyword pyKeyword def conceal cchar=λ
-syntax keyword pyKeyword class conceal cchar=※
-" syntax keyword pyKeyword assert conceal cchar=‽
-syntax match pyKeyword 'yield from' conceal cchar=⇄
-syntax keyword pyKeyword yield conceal cchar=⇇
-syntax keyword pyKeyword self conceal cchar=⚕
+syntax keyword Normal for conceal cchar=∀
+syntax keyword Normal while conceal cchar=⥁
 
-syntax keyword pyType Vector conceal cchar=V
-syntax match pyType '(np|scipy|sp)\.ndarray' conceal cchar=V
-syntax match pyType '\vtf\.Tensor' conceal cchar=𝕋
-syntax match pyType '\vtorch\.[tT]ensor' conceal cchar=𝕋
-syntax keyword pyType tensor Tensor conceal cchar=𝕋
-syntax match pyType '\v(torch|np|tf|scipy|sp)\.float(32|64)?' conceal cchar=ℝ
-syntax match pyType '\v(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
+syntax keyword Normal def conceal cchar=λ
+syntax keyword Normal class conceal cchar=※
+" syntax keyword Keyword assert conceal cchar=‽
+syntax match Keyword 'yield from' conceal cchar=⇄
+syntax keyword Keyword yield conceal cchar=⇇
+syntax keyword Normal self conceal cchar=⚕
+
+syntax keyword Type Vector conceal cchar=V
+syntax match Type '(np|scipy|sp)\.ndarray' conceal cchar=V
+syntax match Type '\vtf\.Tensor' conceal cchar=𝕋
+syntax match Type '\vtorch\.[tT]ensor' conceal cchar=𝕋
+syntax keyword Type tensor Tensor conceal cchar=𝕋
+syntax match Type '\v(torch|np|tf|scipy|sp)\.float(32|64)?' conceal cchar=ℝ
+syntax match Type '\v(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
 
 " XXX These have to be after all the float{16,32} stuff to avoid accidental
 " capture. Use @! to ensure that type casts are not concealed, since that's
@@ -192,16 +194,16 @@ syntax match pyType '\v(torch|np|tf|scipy|sp)\.int(32|64)?' conceal cchar=ℤ
 "
 " [^\s)] is to avoid the edge case of (x: int) where the right paren would
 " override the int conceal.
-syntax match pyType '\v<int(\(|[^\s)\],:])@!' conceal cchar=ℤ
-syntax match pyType '\v<float(\(|[^\s)\],:])@!' conceal cchar=ℝ
-syntax match pyType '\v<complex(\(|[^\s)\],:])@!' conceal cchar=ℂ
-syntax match pyType '\v<str(\(|[^\s)\],:])@!' conceal cchar=𝐒
-syntax match pyType '\v<bool(\(|[^\s)\],:])@!' conceal cchar=𝔹
+syntax match Type '\v<int(\(|[^\s)\],:])@!' conceal cchar=ℤ
+syntax match Type '\v<float(\(|[^\s)\],:])@!' conceal cchar=ℝ
+syntax match Type '\v<complex(\(|[^\s)\],:])@!' conceal cchar=ℂ
+syntax match Type '\v<str(\(|[^\s)\],:])@!' conceal cchar=𝐒
+syntax match Type '\v<bool(\(|[^\s)\],:])@!' conceal cchar=𝔹
 
-syntax match pyKeyword '\v((np|scipy|sp|torch)\.)?arange' conceal cchar=⍳
+syntax match Normal '\v((np|scipy|sp|torch)\.)?arange' conceal cchar=⍳
 
-syntax keyword pyBuiltin all
-syntax keyword pyBuiltin any conceal cchar=∃
+syntax keyword Builtin all
+syntax keyword Builtin any conceal cchar=∃
 
 highlight! link pyBuiltin pyOperator
 highlight! link pyOperator Operator
