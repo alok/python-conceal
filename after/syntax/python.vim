@@ -179,7 +179,8 @@ syntax keyword Normal class conceal cchar=※
 " syntax keyword Keyword assert conceal cchar=‽
 syntax match Keyword 'yield from' conceal cchar=⇄
 syntax keyword Keyword yield conceal cchar=⇇
-syntax keyword Normal self conceal cchar=⚕
+syntax match Normal '\v<self>' conceal cchar=⚕
+syntax match Normal '\v<self>\.' conceal cchar=“
 
 syntax keyword Type Vector conceal cchar=V
 syntax match Type '(np|scipy|sp)\.ndarray' conceal cchar=V
