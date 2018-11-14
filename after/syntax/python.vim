@@ -217,12 +217,4 @@ highlight! link pySpecial Special
 highlight! link pyIdentifier Identifier
 highlight! link pyType Type
 
-" changing this changes the color of vim's conceal
-highlight! link Conceal Normal
-" highlight! link Conceal PreProc
-
-
 setlocal conceallevel=2
-
-" unused ideas
-
