@@ -62,7 +62,9 @@ syntax match Normal '\v[^_]\zs_[tT]\ze>' conceal cchar=ₜ
 " syntax match Constant '\v<\d+\zs_\ze\d+>' conceal cchar=,
 
 " Conceal things like a_ -> a'
-syntax match Normal '\v[^ _]\zs_\ze>' conceal cchar=′
+syntax match Normal '\v[^_]\zs_\ze>' conceal cchar=′
+" Underscore by itself is not concealed
+syntax match Normal '\v<\zs_\ze>' conceal cchar=_
 
 
 " Need to be handled specially for `not in` to work. Order doesn't matter.
