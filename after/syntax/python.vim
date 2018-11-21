@@ -158,6 +158,7 @@ syntax keyword Normal nabla NABLA conceal cchar=∇
 
 " like APL
 syntax keyword Normal range conceal cchar=⍳
+syntax match Normal '\v<\zsrange\(len\ze\(' conceal cchar=⍳
 syntax keyword Normal enumerate conceal cchar=↑
 
 
