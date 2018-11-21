@@ -157,8 +157,10 @@ syntax keyword Normal omega OMEGA conceal cchar=ω
 syntax keyword Normal nabla NABLA conceal cchar=∇
 
 " like APL
-syntax keyword Normal range conceal cchar=⍳
 syntax match Normal '\v<\zsrange\(len\ze\(' conceal cchar=⍳
+" Need to use `syntax match` instead of `syntax keyword` or else keyword takes
+" priority and `range(len...` isn't matched.
+syntax match Normal '\v<range>' conceal cchar=⍳
 syntax keyword Normal enumerate conceal cchar=↑
 
 
