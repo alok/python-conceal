@@ -91,7 +91,7 @@ syntax match Normal '\v<((math|torch|np|tf|scipy|sp)\.)?ceil>' conceal cchar=⌈
 syntax match Normal '\v<((math|torch|np|tf|scipy|sp)\.)?floor>' conceal cchar=⌊
 syntax match Normal '\v<((torch|np|tf|scipy|sp)\.)?(eye|identity)>' conceal cchar=𝕀
 syntax match Normal '\v<((math|np|scipy|sp)\.)e>' conceal cchar=ℯ
-syntax match Normal '\v<((math|np|scipy|sp)\.)inf>' conceal cchar=∞
+syntax match Normal '\v<((math|np|scipy|sp)\.)?inf>' conceal cchar=∞
 syntax match Normal "\v<float('inf')>" conceal cchar=∞
 syntax match Normal '\v<float("inf")>' conceal cchar=∞
 
