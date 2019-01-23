@@ -224,5 +224,3 @@ highlight! link pyConstant Constant
 highlight! link pySpecial Special
 highlight! link pyIdentifier Identifier
 highlight! link pyType Type
-
-setlocal conceallevel=2
